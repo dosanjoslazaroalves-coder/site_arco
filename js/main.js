@@ -24,9 +24,20 @@ document.querySelector('#replay-intro').addEventListener('click',()=>{
 const revealObserver=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target);}});},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 
+// Keep the presentation usable when the local project video cannot be decoded.
+const projectVideo=document.querySelector('#project-video');
+if(projectVideo){
+  projectVideo.addEventListener('error',()=>{
+    const card=projectVideo.closest('.tour-video-card');
+    const message=card?.querySelector('.video-error');
+    card?.classList.add('has-media-error');
+    if(message)message.hidden=false;
+  },{once:true});
+}
+
 // Native lightbox, deduplicated across project sections and the gallery.
 const dialog=document.querySelector('#lightbox');const photo=document.querySelector('#lightbox-image');const caption=document.querySelector('#lightbox-caption');
-const pictures=[...new Map([...document.querySelectorAll('[data-lightbox]')].map(b=>[b.dataset.lightbox,{src:b.dataset.lightbox,caption:b.dataset.caption,alt:b.querySelector('img').alt}])).values()];
+const pictures=[...new Map([...document.querySelectorAll('[data-lightbox]')].map(b=>{const image=b.querySelector('img');return [b.dataset.lightbox,{src:b.dataset.lightbox,caption:b.dataset.caption,alt:image?.alt||b.getAttribute('aria-label')||b.dataset.caption||'Imagem ampliada'}];})).values()];
 let pictureIndex=0,previousFocus;
 function updatePhoto(index){pictureIndex=(index+pictures.length)%pictures.length;const item=pictures[pictureIndex];photo.src=item.src;photo.alt=item.alt;caption.textContent=item.caption;document.querySelector('#lightbox-count').textContent=`${pictureIndex+1} / ${pictures.length}`;}
 document.querySelectorAll('[data-lightbox]').forEach(b=>b.addEventListener('click',()=>{previousFocus=b;updatePhoto(pictures.findIndex(p=>p.src===b.dataset.lightbox));dialog.showModal();document.body.classList.add('modal-open');}));

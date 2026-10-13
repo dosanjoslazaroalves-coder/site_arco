@@ -7,9 +7,11 @@
 <meta name="description" content="DOCE MULTIVERSO — Três mundos, um Natal inesquecível. Descubra a experiência natalina onde os sabores da ARCOR (Paçoca do Amor, 7Belo e Poosh!) ganham vida por meio da tecnologia, diversão e imaginação.">
 <title>DOCE MULTIVERSO — Três mundos, um Natal inesquecível. | ARCOR</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/inter-heavy.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=christmas-luxury-2026-6">
-<script type="module" src="js/main.js?v=christmas-luxury-2026-4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=DM+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=christmas-luxury-2026-11">
+<script type="module" src="js/main.js?v=christmas-luxury-2026-6"></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -27,7 +29,6 @@
     <div class="portal-ceiling"></div>
     <div class="portal-floor"></div>
     <div class="door-frame">
-      <div class="door-world"></div>
       <div class="door door-left"><i></i><b></b></div>
       <div class="door door-right"><i></i><b></b></div>
       <div class="door-light"></div>
@@ -81,7 +82,7 @@
         </div>
       </div>
       <div class="manifesto-images reveal">
-        <img src="assets/images/portal-pacoca.webp" alt="Portal Paçoca do Amor com arcos luminosos em formato de coração" width="1600" height="901" loading="lazy">
+        <img src="assets/images/portal-pacoca.webp" alt="Portal Paçoca do Amor com arcos luminosos em formato de coração" width="1600" height="900" loading="lazy">
         <img src="assets/images/ativacao-7belo.webp" alt="Ativação 7Belo com iluminação vibrante em neon e doces gigantes" width="1600" height="900" loading="lazy">
         <img src="assets/images/poosh-experiencia.webp" alt="Ativação Poosh Frozen World com estética radical de gelo e cores ciano e magenta" width="1600" height="900" loading="lazy">
       </div>
@@ -144,6 +145,26 @@
       <p class="micro plan-caption">CIRCULAÇÃO ACESSÍVEL (NBR 9050) COM RAMPAS SUAVES, PISO ANTIDERRAPANTE E ESPAÇO AMPLO PARA CARRINHOS E CADEIRANTES</p>
     </section>
 
+    <!-- Vídeo geral do Doce Multiverso -->
+    <section id="videos" class="video-section tour-videos section-pad" data-nav-theme="dark">
+      <div class="section-index">
+        <span class="eyebrow">03 / EXPERIÊNCIA EM MOVIMENTO</span>
+        <span class="eyebrow">TOUR GERAL DO PROJETO</span>
+      </div>
+      <div class="split-heading">
+        <h2 class="display reveal">CONHEÇA O DOCE<br><em>MULTIVERSO.</em></h2>
+        <p class="copy">Descubra três universos de experiências interativas, criatividade e diversão, onde a magia do Natal encontra o mundo dos doces.</p>
+      </div>
+      <figure class="tour-video-card tour-video-card--featured reveal">
+        <video id="project-video" width="1920" height="1080" controls playsinline preload="metadata" aria-label="Tour geral em vídeo pelo Doce Multiverso">
+          <source src="assets/videos/doce-multiverso-tour-01.mp4" type="video/mp4">
+          Seu navegador não oferece suporte à reprodução de vídeo.
+        </video>
+        <figcaption><span>TOUR GERAL</span><strong>Percurso pelas atrações temáticas</strong></figcaption>
+        <p class="video-error" role="status" hidden>O vídeo não pôde ser carregado neste navegador.</p>
+      </figure>
+    </section>
+
     <!-- Universos Temáticos -->
     <div id="projetos">
       <!-- 01: Paçoca do Amor -->
@@ -174,29 +195,81 @@
         </div>
 
         <!-- Atrações do Universo Paçoca do Amor -->
-        <div class="attractions-container reveal">
+        <div class="attractions-container">
           <h3 class="attractions-title">Atrações Interativas do Universo</h3>
-          <div class="attractions-grid">
-            <div class="attraction-card">
+          <div class="attraction-list">
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/portal-pacoca.webp" data-caption="Paçoca do Amor — Portal do Amor com iluminação em coração" aria-label="Ampliar Portal do Amor">
+                  <img src="assets/images/portal-pacoca.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portal Paçoca do Amor em forma de coração com iluminação vermelha e dourada">
+                  <span class="image-open" aria-hidden="true">VER PORTAL ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
               <span class="attraction-num">01</span>
               <h4>Portal do Amor</h4>
               <p>Arco imponente com fitas de LED endereçáveis e microcontrolador ESP32. Sensores infravermelhos detectam a chegada do visitante e acendem uma sequência de luzes douradas em formato de coração.</p>
-            </div>
-            <div class="attraction-card">
-              <span class="attraction-num">02</span>
+              </div>
+            </article>
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/cabine-fotografica-pacoca.webp" data-caption="Paçoca do Amor — Cabine fotográfica temática e cenário para registros" aria-label="Ampliar Cabine Fotográfica da Paçoca do Amor">
+                  <img src="assets/images/cabine-fotografica-pacoca.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Cabine fotográfica da Paçoca do Amor com câmera, tela e cenário em forma de coração">
+                  <span class="image-open" aria-hidden="true">VER CABINE ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
+                <span class="attraction-num">02</span>
+                <h4>Cabine Fotográfica Temática</h4>
+                <p>Captura de fotos com cenário visual da Paçoca do Amor, moldura personalizada e visualização digital. A forma de entrega das fotos e os equipamentos ainda serão definidos.</p>
+              </div>
+            </article>
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/pista-corrida-pacoca.webp" data-caption="Paçoca do Amor — Pista de Corrida Interativa com rastro luminoso" aria-label="Ampliar Pista de Corrida Interativa">
+                  <img src="assets/images/pista-corrida-pacoca.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Pista reta de corrida da Paçoca do Amor com dois percursos iluminados e corações na chegada">
+                  <span class="image-open" aria-hidden="true">VER PISTA ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
+              <span class="attraction-num">03</span>
               <h4>Pista de Corrida Interativa</h4>
               <p>Piso interativo com sensores de pressão. Conforme os competidores correm, deixam um rastro digital de paçoca até a linha de chegada, onde um coração luminoso de 1 metro vibra e celebra a vitória.</p>
-            </div>
-            <div class="attraction-card">
-              <span class="attraction-num">03</span>
+              </div>
+            </article>
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/torre-amor-pacoca.webp" data-caption="Paçoca do Amor — Torre do Amor com blocos transparentes inspirados em amendoim" aria-label="Ampliar Torre do Amor">
+                  <img src="assets/images/torre-amor-pacoca.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Jogo Torre do Amor com blocos transparentes preenchidos por amendoins e corações">
+                  <span class="image-open" aria-hidden="true">VER TORRE ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
+              <span class="attraction-num">04</span>
               <h4>Torre do Amor &amp; Mini Fábrica</h4>
               <p>Monumento em resina transparente com amendoins suspensos e engrenagens decorativas que demonstram de forma mágica a moagem e prensagem da paçoca artesanal.</p>
-            </div>
-            <div class="attraction-card">
-              <span class="attraction-num">04</span>
+              </div>
+            </article>
+            <article class="attraction-row attraction-row--text-only reveal">
+              <div class="attraction-card">
+              <span class="attraction-num">05</span>
               <h4>Laboratório Holográfico</h4>
               <p>Ilusão de Pepper's Ghost com projeção tridimensional de receitas natalinas flutuantes, combinando tecnologia e tradição em um espetáculo visual.</p>
-            </div>
+              </div>
+            </article>
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/quiosque-alimentos-pacoca.webp" data-caption="Paçoca do Amor — Quiosque de alimentos integrado à ambientação do parque" aria-label="Ampliar Quiosque de Alimentos da Paçoca do Amor">
+                  <img src="assets/images/quiosque-alimentos-pacoca.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Quiosque de alimentos Paçoca do Amor com vitrine, produtos e balcão iluminado">
+                  <span class="image-open" aria-hidden="true">VER QUIOSQUE ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
+                <span class="attraction-num">06</span>
+                <h4>Quiosque de Alimentos</h4>
+                <p>Ponto de atendimento e exposição de produtos integrado à ambientação acolhedora do parque.</p>
+              </div>
+            </article>
           </div>
         </div>
 
@@ -250,11 +323,11 @@
 
         <div class="candy-layout">
           <figure class="reveal">
-            <button class="image-button" data-lightbox="assets/images/espelho-magico-7belo.webp" data-caption="7Belo — Magic Mirror Dance com totem neon e tracking de passos natalinos" aria-label="Ampliar Espelho Mágico 7Belo">
-              <img src="assets/images/espelho-magico-7belo.webp" width="1600" height="1200" loading="lazy" alt="Espelho mágico interativo com iluminação neon magenta e ciano, com totem de dança e avatar virtual">
-              <span class="image-open" aria-hidden="true">VER ESPELHO MÁGICO ↗</span>
+            <button class="image-button" data-lightbox="assets/images/parque-7belo.webp" data-caption="7Belo — Visão geral do parque com Revele a 7Belo e Magic Mirror Dance" aria-label="Ampliar visão geral do Parque 7Belo">
+              <img src="assets/images/parque-7belo.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Parque 7Belo no shopping com as atrações Revele a 7Belo e Magic Mirror Dance">
+              <span class="image-open" aria-hidden="true">VER PARQUE 7BELO ↗</span>
             </button>
-            <figcaption>Totem neon 7Belo: MediaPipe pose tracking, dança sincronizada e chuva virtual de balas.</figcaption>
+            <figcaption>Visão integrada das duas atrações principais: desafio visual e dança com pontuação.</figcaption>
           </figure>
           <div class="copy reveal">
             <p>O universo <strong>7Belo</strong> é uma explosão de vitalidade, pop art e diversão para todas as idades. As cores magenta, ciano e amarelo criam um cenário elétrico onde as tradicionais balas de framboesa ganham proporções monumentais.</p>
@@ -267,19 +340,37 @@
         </div>
 
         <!-- Atrações do Universo 7Belo -->
-        <div class="attractions-container reveal">
+        <div class="attractions-container">
           <h3 class="attractions-title">Atrações Interativas do Universo</h3>
-          <div class="attractions-grid">
-            <div class="attraction-card">
+          <div class="attraction-list">
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/revele-7belo.webp" data-caption="7Belo — Quebra-cabeça tridimensional Revele a 7Belo" aria-label="Ampliar Revele a 7Belo">
+                  <img src="assets/images/revele-7belo.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Atração Revele a 7Belo com peças virtuais de quebra-cabeça e três terminais interativos">
+                  <span class="image-open" aria-hidden="true">VER DESAFIO ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
               <span class="attraction-num">01</span>
-              <h4>7Belo Magic Mirror Dance</h4>
-              <p>Espelho inteligente equipado com câmera HD e algoritmo MediaPipe. Rastreia 33 pontos corporais em tempo real, avalia passos natalinos e concede combos e feedback luminoso dinâmico.</p>
-            </div>
-            <div class="attraction-card">
-              <span class="attraction-num">02</span>
               <h4>Revele a 7Belo (Puzzle 3D)</h4>
               <p>Totem holográfico onde enigmas táteis com sensores capacitivos desafiam o raciocínio rápido. Ao resolver o quebra-cabeça, uma explosão de cores e doces holográficos celebra a conquista.</p>
-            </div>
+              </div>
+            </article>
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/magic-mirror-dance-7belo.webp" data-caption="7Belo — Magic Mirror Dance com avatar, câmera e pontuação" aria-label="Ampliar Magic Mirror Dance 7Belo">
+                  <img src="assets/images/magic-mirror-dance-7belo.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Magic Mirror Dance 7Belo com tela vertical, câmera, avatar e área iluminada para dança">
+                  <span class="image-open" aria-hidden="true">VER ESPELHO ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
+                <span class="attraction-num">02</span>
+                <h4>7Belo Magic Mirror Dance</h4>
+                <p>Espelho inteligente equipado com câmera HD e algoritmo MediaPipe. Rastreia 33 pontos corporais em tempo real, avalia passos natalinos e concede combos e feedback luminoso dinâmico.</p>
+              </div>
+            </article>
+          </div>
+          <div class="attraction-support-grid reveal">
             <div class="attraction-card">
               <span class="attraction-num">03</span>
               <h4>Quiosque Neon Instagramável</h4>
@@ -343,9 +434,9 @@
             <p class="micro">EXPLORE OS ELEMENTOS MULTISSENSORIAIS DO CONCEITO</p>
           </div>
           <figure class="poosh-visual reveal" data-sense="luz">
-            <button class="image-button" data-lightbox="assets/images/poosh-jogo-flocos.webp" data-caption="Poosh! Frozen World — Parede dos 6 Flocos de Neve e Simulador de Inverno" aria-label="Ampliar Parede dos 6 Flocos Poosh">
-              <img src="assets/images/poosh-jogo-flocos.webp" width="1600" height="1200" loading="lazy" alt="Parede interativa com seis flocos de neve iluminados e piso reflexivo azul gelo">
-              <span class="image-open" aria-hidden="true">VER PAREDE DE FLOCOS ↗</span>
+            <button class="image-button" data-lightbox="assets/images/poosh-experiencia.webp" data-caption="Poosh! Frozen World — Visão geral do universo imersivo congelado" aria-label="Ampliar Universo Imersivo Congelado Poosh">
+              <img src="assets/images/poosh-experiencia.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Visão geral do Poosh Frozen World com cristais, iluminação azul, parede de flocos, snowboard e saída com bolhas">
+              <span class="image-open" aria-hidden="true">VER UNIVERSO CONGELADO ↗</span>
             </button>
           </figure>
         </div>
@@ -356,29 +447,61 @@
         </div>
 
         <!-- Atrações do Universo Poosh -->
-        <div class="attractions-container reveal">
+        <div class="attractions-container">
           <h3 class="attractions-title">Atrações Interativas do Universo</h3>
-          <div class="attractions-grid">
-            <div class="attraction-card">
+          <div class="attraction-list">
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/poosh-jogo-flocos.webp" data-caption="Poosh! — Parede Interativa dos Seis Flocos" aria-label="Ampliar Parede dos 6 Flocos de Neve">
+                  <img src="assets/images/poosh-jogo-flocos.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="Parede interativa Poosh com seis flocos diferentes e níveis verde, vermelho e roxo">
+                  <span class="image-open" aria-hidden="true">VER PAREDE ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
               <span class="attraction-num">01</span>
               <h4>Parede dos 6 Flocos de Neve</h4>
               <p>Desafio de reflexo com 6 botões gigantes em policarbonato retroiluminado. 30 segundos cronometrados com 3 níveis de dificuldade (Fácil - Verde, Médio - Vermelho, Difícil - Roxo) e placar dinâmico.</p>
-            </div>
-            <div class="attraction-card">
+              </div>
+            </article>
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/snowboard-poosh.webp" data-caption="Poosh! — Simulador Snowboard Freeze Balance" aria-label="Ampliar Simulador Snowboard Poosh">
+                  <img src="assets/images/snowboard-poosh.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Simulador Poosh Freeze Balance com prancha de snowboard, tela panorâmica e cenografia de gelo">
+                  <span class="image-open" aria-hidden="true">VER SNOWBOARD ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
               <span class="attraction-num">02</span>
               <h4>Simulador Snowboard (Freeze Balance)</h4>
               <p>Prancha articulada sobre molas industriais e sensor inercial MPU-6050. Ventiladores de velocidade modulada sopram vento frio conforme o visitante se equilibra em uma descida virtual por montanhas de gelo.</p>
-            </div>
-            <div class="attraction-card">
+              </div>
+            </article>
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/poosh-entrada-inverno.webp" data-caption="Poosh! — Túnel de Entrada Cristalino" aria-label="Ampliar Túnel de Entrada Cristalino Poosh">
+                  <img src="assets/images/poosh-entrada-inverno.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="Entrada Poosh com arcos de cristais translúcidos, iluminação azul e flocos cenográficos">
+                  <span class="image-open" aria-hidden="true">VER ENTRADA ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
               <span class="attraction-num">03</span>
               <h4>Túnel de Entrada Cristalino</h4>
               <p>Passagem sensorial com estalactites translúcidas, piso acústico que estala como neve fresca e máquina geradora de flocos de neve cenográficos não tóxicos.</p>
-            </div>
-            <div class="attraction-card">
+              </div>
+            </article>
+            <article class="attraction-row reveal">
+              <figure class="attraction-media">
+                <button class="image-button" data-lightbox="assets/images/poosh-saida-congelada.webp" data-caption="Poosh! — Saída do Mundo Congelado com chuva de bolhas" aria-label="Ampliar Saída com Chuva de Bolhas Poosh">
+                  <img src="assets/images/poosh-saida-congelada.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Saída Poosh com crianças atravessando uma chuva de bolhas em cenário de cristais iluminados">
+                  <span class="image-open" aria-hidden="true">VER SAÍDA ↗</span>
+                </button>
+              </figure>
+              <div class="attraction-card">
               <span class="attraction-num">04</span>
               <h4>Saída com Chuva de Bolhas Aromáticas</h4>
               <p>Túnel de saída onde canhões automatizados disparam bolhas de sabão aromatizadas com essência de hortelã e tutti-frutti, selando a memória olfativa da visita.</p>
-            </div>
+              </div>
+            </article>
           </div>
         </div>
 
@@ -497,7 +620,7 @@
       <div class="gallery-grid">
         <figure class="gallery-wide reveal">
           <button class="image-button" data-lightbox="assets/images/portal-pacoca.webp" data-caption="01 / Portal Paçoca do Amor — Iluminação em coração e recepção no shopping" aria-label="Ampliar Portal Paçoca do Amor">
-            <img src="assets/images/portal-pacoca.webp" width="1600" height="901" loading="lazy" alt="Portal Paçoca do Amor com arcos de LED e coração central iluminado">
+            <img src="assets/images/portal-pacoca.webp" width="1600" height="900" loading="lazy" alt="Portal Paçoca do Amor com arcos de LED e coração central iluminado">
             <span class="image-open" aria-hidden="true">01 / PORTAL PAÇOCA ↗</span>
           </button>
         </figure>
@@ -558,7 +681,7 @@
 
         <figure class="gallery-wide reveal">
           <button class="image-button" data-lightbox="assets/images/poosh-saida-congelada.webp" data-caption="09 / Poosh! — Saída do Mundo Congelado com Chuva de Bolhas Aromáticas" aria-label="Ampliar Saída Poosh">
-            <img src="assets/images/poosh-saida-congelada.webp" width="1672" height="941" loading="lazy" alt="Túnel de saída congelado com efeito de bolhas e iluminação azul">
+            <img src="assets/images/poosh-saida-congelada.webp" width="1600" height="900" loading="lazy" alt="Túnel de saída congelado com efeito de bolhas e iluminação azul">
             <span class="image-open" aria-hidden="true">09 / SAÍDA POOSH ↗</span>
           </button>
         </figure>
