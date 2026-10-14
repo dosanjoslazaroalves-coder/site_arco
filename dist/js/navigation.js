@@ -25,9 +25,9 @@ export function initNavigation() {
     header.style.setProperty('--progress',String(max>0?Math.min(1,scrollY/max):0));
     const sectionId=current?.id;let active='#conceito';
     if(sectionId==='implantacao')active='#implantacao';
+    else if(sectionId==='jornada')active='#jornada';
     else if(['pacoca','sete-belo','poosh'].includes(sectionId))active='#projetos';
     else if(sectionId==='engenharia')active='#engenharia';
-    else if(sectionId==='galeria')active='#galeria';
     else if(['equipe','final'].includes(sectionId))active='#equipe';
     links.forEach(a=>{if(a.hash===active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
   }
